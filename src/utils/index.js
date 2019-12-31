@@ -6,7 +6,7 @@
 
 // 校验邮箱
 export function validateEmail(val) {
-  const emailRegExp=/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
+  const emailRegExp = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
   return emailRegExp.test(val)
 }
 
@@ -44,7 +44,7 @@ export function parseTime(time, cFormat) {
 }
 
 // 校验是否符合图片格式
-export function validImage(file, callback){
+export function validImage(file, callback) {
   const fileName = file.name;
   const fileExt = '|' + fileName.substr(fileName.lastIndexOf('.') + 1, fileName.length - 1) + '|';
   if ('|jpg|png|gif|bmp|tif|jpeg|JPG|PNG|GIF|BMP|TIF|JPEG|'.indexOf(fileExt) >= 0) {

@@ -53,7 +53,7 @@ module.exports = {
   productionSourceMap: false,
   pages,
   devServer: {
-    index: 'class.html.html', // 默认启动serve 打开index页面
+    index: 'index.html', // 默认启动serve 打开index页面
     open: process.platform === 'darwin',
     host: '',
     port: 8081,

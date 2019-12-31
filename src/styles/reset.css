@@ -50,10 +50,9 @@ table {
 
 .page-layout{
   width: 1200px;
-  margin: 24px auto 0;
+  margin: 0 auto;
   overflow:hidden;
   padding-bottom:20px;
-  min-height:850px;
 }
 .clearfix:after{
   display: block;
