@@ -158,7 +158,7 @@
   }
 
   /deep/ .el-main {
-    padding: 20px 0;
+    padding: 0;
   }
 
   /deep/ .el-footer {
@@ -168,6 +168,10 @@
   /deep/ .el-dropdown {
     color: @fontColor;
     font-size: 18px;
+  }
+
+  /deep/ .el-dropdown-menu__item{
+    padding: 0 40px;
   }
 
   /deep/ .el-dropdown-menu__item:focus, /deep/ .el-dropdown-menu__item:not(.is-disabled):hover {
