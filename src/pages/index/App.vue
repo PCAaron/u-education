@@ -33,6 +33,14 @@ export default {
         {
           cover: require('../../assets/images/banner3.png'),
           title: '班课培优'
+        },
+        {
+          cover: require('../../assets/images/banner4.png'),
+          title: '特色晚辅导'
+        },
+        {
+          cover: require('../../assets/images/banner5.png'),
+          title: '班课培优'
         }
       ]
     }
