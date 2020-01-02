@@ -10,6 +10,12 @@ export function validateEmail(val) {
   return emailRegExp.test(val)
 }
 
+// 校验手机号
+export function validateTel(val) {
+  const telRegExp = /^1[3456789]\d{9}$/
+  return telRegExp.test(val)
+}
+
 // 格式化时间
 export function parseTime(time, cFormat) {
   if (arguments.length === 0) {

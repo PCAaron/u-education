@@ -2,17 +2,22 @@
   <div id="index">
     <UContainer>
       <UCarousel :bannerList="bannerList"></UCarousel>
+      <div class="map-wrap">
+        <UMap :styleObj="{width: '1200px',margin: '0 auto'}"></UMap>
+      </div>
     </UContainer>
   </div>
 </template>
 <script>
 import UContainer from '../../components/UContainer'
 import UCarousel from '../../components/UCarousel'
+import UMap from '../../components/UMap'
 export default {
   name: 'Index',
   components: {
     UContainer,
-    UCarousel
+    UCarousel,
+    UMap
   },
   data() {
     return {
@@ -43,5 +48,7 @@ export default {
 </script>
 <style lang="less">
 @import "../../styles/common.less";
-
+.map-wrap{
+  padding: 50px 0 30px;
+}
 </style>

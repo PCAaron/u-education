@@ -1,10 +1,7 @@
 /*
  * @Descripttion: Do not edit
  * @version: Do not edit
- * @Author: 黎在亚1
- * @Date: 2019-09-02 15:47:10
- * @LastEditors: 黎在亚
- * @LastEditTime: 2019-09-27 10:32:24
+ * @Author: Aaron
  */
 module.exports = {
   'env': {

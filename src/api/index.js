@@ -23,7 +23,7 @@
 // 引用axios
 import axios from 'axios'
 import Qs from 'qs'
-import {toType, filterNull} from '@/utils/index'
+import { toType, filterNull } from '@/utils/index'
 import { prefixUrl } from '@/utils/common'
 import { MessageBox } from 'element-ui'
 

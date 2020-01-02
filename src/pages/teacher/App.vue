@@ -6,7 +6,7 @@
 <script>
 
 export default {
-  name: 'teacher',
+  name: 'Teacher',
   components: {
   },
   data() {

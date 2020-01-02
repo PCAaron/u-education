@@ -6,7 +6,7 @@
 <script>
 
 export default {
-  name: 'guide',
+  name: 'Guide',
   components: {
   },
   data() {

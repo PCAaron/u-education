@@ -8,9 +8,7 @@
     "lint": "eslint --ext .js,.vue src",
     "lintfix": "eslint --ext .js,.vue src --fix",
     "dev": "vue-cli-service build --mode productiondev",
-    "sit": "vue-cli-service build --mode productionsit",
-    "uat": "vue-cli-service build --mode productionuat",
-    "djy": "vue-cli-service build --mode productiondjy"
+    "stb": "vue-cli-service build --mode productionstb"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -6,7 +6,7 @@
 <script>
 
 export default {
-  name: 'information',
+  name: 'Information',
   components: {
   },
   data() {

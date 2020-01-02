@@ -26,6 +26,8 @@ params
 * mold:默认banner轮播图
 * bannerList: 轮播内容，默认为空数组
 
+##### UMap:百度地图
+
 
 ## 依赖安装
 ```
