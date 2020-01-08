@@ -17,7 +17,7 @@
       </div>
       <div class="header-menu">
         <el-row type="flex" class="page-layout">
-          <el-col class="header-menu_each" :class="current.includes(routeMap.index) || '/' ? 'active' : ''">
+          <el-col class="header-menu_each" :class="current == (routeMap.index || '/') ? 'active' : ''">
             <h3 @click="toPage(routeMap.index)">首页</h3>
           </el-col>
           <el-col class="header-menu_each" :class="current.includes(routeMap.class) ? 'active' : ''">
@@ -183,7 +183,7 @@
         windowOpenUrl(page)
       },
       handleCommand(command) {
-        windowOpenUrl(routeMap.guide, { type: command })
+        windowOpenUrl(routeMap.class, { type: command })
       },
       onSubmit() {
 
