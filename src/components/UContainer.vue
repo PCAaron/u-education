@@ -5,47 +5,49 @@
         <el-row type="flex" class="page-layout">
           <el-col :span="12">
             <h1 class="header-logo">
-              Logo
+              <img src="../assets/images/logo.png">
             </h1>
           </el-col>
           <el-col :span="12">
             <h3 class="header-contract">
-              phone
+              <img src="../assets/images/contract.png">
             </h3>
           </el-col>
         </el-row>
       </div>
-      <el-row type="flex" class="page-layout header-menu">
-        <el-col class="header-menu_each" :class="current.includes(routeMap.index) || '/' ? 'active' : ''">
-          <h3 @click="toPage(routeMap.index)">首页</h3>
-        </el-col>
-        <el-col class="header-menu_each" :class="current.includes(routeMap.class) ? 'active' : ''">
-          <h3>
-            <el-dropdown @command="handleCommand">
+      <div class="header-menu">
+        <el-row type="flex" class="page-layout">
+          <el-col class="header-menu_each" :class="current.includes(routeMap.index) || '/' ? 'active' : ''">
+            <h3 @click="toPage(routeMap.index)">首页</h3>
+          </el-col>
+          <el-col class="header-menu_each" :class="current.includes(routeMap.class) ? 'active' : ''">
+            <h3>
+              <el-dropdown @command="handleCommand">
               <span class="el-dropdown-link">
                 班课培优<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="math">数学</el-dropdown-item>
-                <el-dropdown-item command="english">英语</el-dropdown-item>
-                <el-dropdown-item command="chinese">语文</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </h3>
-        </el-col>
-        <el-col class="header-menu_each" :class="current.includes(routeMap.guide) ? 'active' : ''">
-          <h3 @click="toPage(routeMap.guide)">特色晚辅</h3>
-        </el-col>
-        <el-col class="header-menu_each" :class="current.includes(routeMap.teacher) ? 'active' : ''">
-          <h3 @click="toPage(routeMap.teacher)">名师介绍</h3>
-        </el-col>
-        <el-col class="header-menu_each" :class="current.includes(routeMap.information) ? 'active' : ''">
-          <h3 @click="toPage(routeMap.information)">资讯中心</h3>
-        </el-col>
-        <el-col class="header-menu_each" :class="current.includes(routeMap.about) ? 'active' : ''">
-          <h3 @click="toPage(routeMap.about)">关于我们</h3>
-        </el-col>
-      </el-row>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item command="math">数学</el-dropdown-item>
+                  <el-dropdown-item command="english">英语</el-dropdown-item>
+                  <el-dropdown-item command="chinese">语文</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </h3>
+          </el-col>
+          <el-col class="header-menu_each" :class="current.includes(routeMap.guide) ? 'active' : ''">
+            <h3 @click="toPage(routeMap.guide)">特色晚辅</h3>
+          </el-col>
+          <el-col class="header-menu_each" :class="current.includes(routeMap.teacher) ? 'active' : ''">
+            <h3 @click="toPage(routeMap.teacher)">名师介绍</h3>
+          </el-col>
+          <el-col class="header-menu_each" :class="current.includes(routeMap.information) ? 'active' : ''">
+            <h3 @click="toPage(routeMap.information)">资讯中心</h3>
+          </el-col>
+          <el-col class="header-menu_each" :class="current.includes(routeMap.about) ? 'active' : ''">
+            <h3 @click="toPage(routeMap.about)">关于我们</h3>
+          </el-col>
+        </el-row>
+      </div>
     </el-header>
     <el-main class="main">
       <slot></slot>
@@ -53,8 +55,10 @@
     <el-footer class="footer" height="auto">
       <div class="footer-form">
         <el-row type="flex" class="page-layout">
-          <el-col :span="6">
-
+          <el-col :span="6" class="">
+            <div class="footer-student">
+              <img src="../assets/images/student.png">
+            </div>
           </el-col>
           <el-col :span="18">
             <el-form :inline="true" :model="consult">
@@ -190,7 +194,7 @@
 <style lang="less" scoped>
   @import "../styles/common.less";
 
-  @headerBg: #dadddd;
+  @headerBg: #edeaea;
   @footerBg: #fff;
   @footerColor: #8b8b8c;
 
@@ -232,10 +236,15 @@
   .header {
     .header-meta {
       background-color: @headerBg;
+      padding: 10px 0;
+      .header-contract{
+        text-align: right;
+        margin-top: 8px;
+      }
     }
 
     .header-menu {
-
+      background-color: #f9f2f2;
       &_each {
         text-align: center;
         line-height: 56px;
@@ -257,6 +266,16 @@
   .footer {
     background-color: @footerBg;
     color: @footerColor;
+    padding-bottom: 20px;
+    .footer-student{
+      position: relative;
+      img{
+        position: absolute;
+        bottom:-64px;
+        left: 0;
+        z-index: 1;
+      }
+    }
     .footer-form{
       padding-top: 60px;
       background-color: @themeColor;

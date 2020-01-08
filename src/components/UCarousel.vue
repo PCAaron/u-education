@@ -4,7 +4,7 @@
       <template v-if="mold == 'banner'">
         <el-carousel-item v-for="(item, index) in carouselList" :key="index">
           <h3>
-            <img :src="item.cover" :alt="item.title">
+            <img :src="item.cover" :alt="item.title" style="width: 100%">
           </h3>
         </el-carousel-item>
       </template>
