@@ -231,8 +231,8 @@
   }
   .bottom-btns{
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 50px;
+    bottom: 30px;
     z-index: 100;
     .el-marker{
       padding:10px;
