@@ -1,5 +1,5 @@
 <template>
-  <el-container class="wrap">
+  <el-container class="wrap" style="min-width: 1200px !important;">
     <el-header class="header" height="auto">
       <div class="header-meta">
         <el-row type="flex" class="page-layout">
