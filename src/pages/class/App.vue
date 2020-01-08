@@ -15,6 +15,43 @@
           </p>
         </div>
       </div>
+      <div class="class-wrap">
+        <h2 class="special-title"><span>课堂体系</span>针对性教学根据考情进行提拔</h2>
+        <el-row type="flex" class="page-layout" justify="center">
+          <el-col :span="6">
+            <div class="class-card">
+              <h3 class="class-card_title">12人精品课</h3>
+              <ul class="class-card_des">
+                <li>针对性教学</li>
+                <li>个性化培优</li>
+                <li>精准把握每个学员的特点</li>
+              </ul>
+              <a class="class-card_btn">立即咨询</a>
+            </div>
+          </el-col>
+          <el-col :span="6">
+            <div class="class-card">
+              <h3 class="class-card_title">20人双师班</h3>
+              <ul class="class-card_des">
+                <li>民师专业授课</li>
+                <li>助教实时跟进</li>
+                <li>双师让课堂更高效</li>
+              </ul>
+              <a class="class-card_btn">立即咨询</a>
+            </div>
+          </el-col>
+          <el-col :span="6">
+            <div class="class-card">
+              <h3 class="class-card_title">名师一对一</h3>
+              <ul class="class-card_des">
+                <li>量身定制的教学设计</li>
+                <li>专属的学员提升方案</li>
+              </ul>
+              <a class="class-card_btn">立即咨询</a>
+            </div>
+          </el-col>
+        </el-row>
+      </div>
       <div class="map-wrap">
         <UMap :styleObj="{width: '1200px',margin: '0 auto',padding:'20px',backgroundColor:'#fff'}"></UMap>
       </div>
@@ -98,6 +135,30 @@
         line-height: 20px;
         text-align: left;
         text-indent: 2em;
+      }
+    }
+  }
+  .class-wrap{
+    background-color: #f9f2f2;
+    padding: 20px 0;
+    text-align: center;
+    h2.special-title{
+      font-size: 36px;
+      font-weight: bolder;
+      margin: 40px 0 28px;
+      span{
+        padding:0 30px 0  0;
+        color: #f08519;
+      }
+    }
+    .class-card{
+      display: inline-block;
+      margin: 0 auto;
+      border:1px solid #d0d0d0;
+      padding: 20px 10px 10px;
+      &_title{
+        color:#10623f;
+        font-size: 22px;
       }
     }
   }
