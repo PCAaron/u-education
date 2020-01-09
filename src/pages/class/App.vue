@@ -82,6 +82,50 @@
           </div>
         </div>
       </div>
+      <div class="room-wrap">
+        <h2 class="special-title"><span>U能特色</span>加入U能，你一定能！</h2>
+        <div class="room-wrap-container page-layout">
+          <img src="../../assets/images/class_bg_contract.png">
+          <div class="room-desc_1">
+            <h4 class="room-desc_title">家校服务专业</h4>
+            <ul>
+              <li class="room-desc_li">U能家长会，名师答疑</li>
+              <li class="room-desc_li">综合能力检测</li>
+              <li class="room-desc_li">学习重点预览</li>
+              <li class="room-desc_li">学习资讯分享</li>
+            </ul>
+            <a class="contract"></a>
+          </div>
+          <div class="room-desc_2">
+            <h4 class="room-desc_title">学科分班授课</h4>
+            <ul>
+              <li class="room-desc_li">分年级、分时段</li>
+              <li class="room-desc_li">提高学科知识</li>
+              <li class="room-desc_li">拓展逻辑思维</li>
+            </ul>
+            <a class="contract"></a>
+          </div>
+          <div class="room-desc_3">
+            <h4 class="room-desc_title">公开课堂</h4>
+            <ul>
+              <li class="room-desc_li">让家长了解孩子课堂表现</li>
+              <li class="room-desc_li">促进孩子全面发展</li>
+              <li class="room-desc_li">充分发挥家校合力</li>
+            </ul>
+            <a class="contract"></a>
+          </div>
+          <div class="room-desc_4">
+            <h4 class="room-desc_title">师资力量雄厚</h4>
+            <ul>
+              <li class="room-desc_li">教师团队层层筛选</li>
+              <li class="room-desc_li">周期性教学技能培训</li>
+              <li class="room-desc_li">专注中小学全面培优</li>
+            </ul>
+            <a class="contract"></a>
+          </div>
+        </div>
+        <h2 class="special-title">舒适环境<span></span>健康学习</h2>
+      </div>
       <div class="map-wrap">
         <UMap :styleObj="{width: '1200px',margin: '0 auto',padding:'20px',backgroundColor:'#fff'}"></UMap>
       </div>
@@ -323,6 +367,60 @@
               cursor: pointer;
             }
           }
+        }
+      }
+    }
+  }
+  .room-wrap{
+    .commonMix(#edeaea);
+    .room-wrap-container{
+      position: relative;
+      color:#545148;
+      a.contract{
+        display: inline-block;
+        padding: 16px;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      h4.room-desc_title{
+        color:#332c2b;
+        margin-bottom: 10px;
+      }
+      li.room-desc_li{
+        line-height: 22px;
+        font-size: 14px;
+      }
+      .room-desc_1{
+        position: absolute;
+        width: 168px;
+        left: 160px;
+        top: 192px;
+      }
+      .room-desc_2{
+        position: absolute;
+        width: 168px;
+        left: 394px;
+        top: 192px;
+        a{
+          margin-top: 28px;
+        }
+      }
+      .room-desc_3{
+        position: absolute;
+        width: 168px;
+        right: 395px;
+        top: 192px;
+        a{
+          margin-top: 28px;
+        }
+      }
+      .room-desc_4{
+        position: absolute;
+        width: 168px;
+        right: 160px;
+        top: 192px;
+        a{
+          margin-top: 28px;
         }
       }
     }
