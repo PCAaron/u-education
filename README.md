@@ -26,6 +26,8 @@ params
 * mold:默认banner轮播图
 * bannerList: 轮播内容，默认为空数组
 
+##### USwiper:切换轮播组件
+
 ##### UMap:腾讯地图
 
 

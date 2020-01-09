@@ -124,7 +124,12 @@
             <a class="contract"></a>
           </div>
         </div>
-        <h2 class="special-title">舒适环境<span></span>健康学习</h2>
+      </div>
+      <div class="image-wrap">
+        <h2 class="special-title" style="margin-top: 0">舒适环境<span></span>健康学习</h2>
+        <div class="page-layout">
+          <USwiper/>
+        </div>
       </div>
       <div class="map-wrap">
         <UMap :styleObj="{width: '1200px',margin: '0 auto',padding:'20px',backgroundColor:'#fff'}"></UMap>
@@ -136,6 +141,7 @@
   import UContainer from '../../components/UContainer'
   import UCarousel from '../../components/UCarousel'
   import UMap from '../../components/UMap'
+  import USwiper from '../../components/USwiper'
   import bannerMixin from '../../mixins/bannerMixin'
   import { queryString } from '../../utils'
 
@@ -180,7 +186,8 @@
     components: {
       UContainer,
       UCarousel,
-      UMap
+      UMap,
+      USwiper
     },
     mixins: [bannerMixin],
     created() {
@@ -279,6 +286,9 @@
         cursor: pointer;
       }
     }
+  }
+  .image-wrap{
+    .commonMix(#edeaea);
   }
   .teacher-wrap{
     .commonMix(#d5e2b8);
@@ -427,6 +437,6 @@
   }
   .map-wrap {
     padding: 50px 0 30px;
-    background-color: #edeaea;
+    background-color: #f9f2f2;
   }
 </style>
