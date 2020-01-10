@@ -184,6 +184,7 @@
       },
       handleCommand(command) {
         windowOpenUrl(routeMap.class, { type: command })
+        this.$emit('changeType', command)
       },
       onSubmit() {
 
