@@ -20,6 +20,7 @@
 
 const path = require('path')
 const glob = require('glob')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 // 配置pages多页面获取当前文件夹下的html和js
 function getEntry(globPath) {
@@ -101,13 +102,27 @@ module.exports = {
     }
   },
   configureWebpack: config => {
-    // if (process.env.NODE_ENV.includes('production')) {
-    //   config.output = {
-    //     path: path.join(__dirname, './dist'),
-    //     baseUrl: './',
-    //     publicPath: './',
-    //     filename: 'js/[name].[contenthash:8].js'
-    //   }
-    // }
+    if (process.env.NODE_ENV.includes('production')) {
+      return {
+        plugins: [
+          new PrerenderSpaPlugin({
+            staticDir: path.join(__dirname, 'dist'),
+
+            // 对应自己的路由文件，比如a有参数，就需要写成 /a/param1。
+            routes: ['/', '/class', '/guide', '/teacher', '/information', '/about'],
+
+            // 这个很重要，如果没有配置这段，也不会进行预编译
+            renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
+              inject: {
+                foo: 'bar'
+              },
+              headless: false,
+              // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
+              renderAfterDocumentEvent: 'render-event'
+            })
+          })
+        ]
+      }
+    }
   }
 }

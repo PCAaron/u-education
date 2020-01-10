@@ -14,5 +14,8 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  mounted() {
+    document.dispatchEvent(new Event('render-event'))
+  }
 }).$mount('#app')
