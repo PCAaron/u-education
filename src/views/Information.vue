@@ -18,10 +18,10 @@
   </div>
 </template>
 <script>
-  import UContainer from '../../components/UContainer'
-  import UCarousel from '../../components/UCarousel'
-  import USwiper from '../../components/USwiper'
-  import bannerMixin from '../../mixins/bannerMixin'
+  import UContainer from '@/components/UContainer'
+  import UCarousel from '@/components/UCarousel'
+  import USwiper from '@/components/USwiper'
+  import bannerMixin from '@/mixins/bannerMixin'
 
 export default {
   name: 'Information',
@@ -44,8 +44,7 @@ export default {
 }
 </script>
 <style lang="less">
-@import "../../styles/common.less";
-@import "../../styles/common.less";
+@import "../styles/common.less";
 .commonMix(@bg:#f9f2f2){
   background-color: @bg;
   padding: 20px 0;
@@ -55,7 +54,7 @@ h2.special-title{
   font-size: 36px;
   font-weight: bolder;
   margin: 40px 0 28px;
-  background: url("../../assets/images/star-line_icon.png") no-repeat center;
+  background: url("../assets/images/star-line_icon.png") no-repeat center;
   span{
     padding:0 30px 0  0;
     color: #f08519;

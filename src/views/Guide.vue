@@ -17,7 +17,7 @@
       <div class="second-wrap">
         <h2 class="special-title" style="margin-top: 0">学生专属<span>——</span>“五大特色”</h2>
         <div class="second-wrap_container">
-          <img src="../../assets/images/class_bg_guide2.png">
+          <img src="../assets/images/class_bg_guide2.png">
           <div class="time-line">
             <p class="time-com line1">五、六年级分题型、分科目学习、小升初知识、全面备战</p>
             <p class="time-com line2">帮学生整理好每单元重点短语、句型、抓好学生英语基础、渗入语法讲解</p>
@@ -40,11 +40,11 @@
   </div>
 </template>
 <script>
-import UContainer from '../../components/UContainer'
-import UCarousel from '../../components/UCarousel'
-import UMap from '../../components/UMap'
-import USwiper from '../../components/USwiper'
-import bannerMixin from '../../mixins/bannerMixin'
+import UContainer from '@/components/UContainer'
+import UCarousel from '@/components/UCarousel'
+import UMap from '@/components/UMap'
+import USwiper from '@/components/USwiper'
+import bannerMixin from '@/mixins/bannerMixin'
 
 export default {
   name: 'Guide',
@@ -68,7 +68,7 @@ export default {
 }
 </script>
 <style lang="less">
-@import "../../styles/common.less";
+@import "../styles/common.less";
 .commonMix(@bg:#f9f2f2){
   background-color: @bg;
   padding: 20px 0;

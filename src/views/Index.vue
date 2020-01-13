@@ -6,7 +6,7 @@
         <h2 class="special-title">全力教育<span>关注进步</span></h2>
         <p class="special-desc">以“独特”激发学生兴趣<span>以“旁听”获得家长信任</span></p>
         <div class="special-wrap_container">
-          <img src="../../assets/images/index_bg_special.png">
+          <img src="../assets/images/index_bg_special.png">
           <div class="subdesc-1">
             <p>名师专业授课</p>
             <p>助教实时跟进</p>
@@ -25,12 +25,12 @@
       </div>
       <div class="join-wrap">
         <div class="join-wrap_container">
-          <img src="../../assets/images/index_bg_join.png">
-          <img class="qrcode-icon" src="../../assets/images/index_qrcode.png">
+          <img src="../assets/images/index_bg_join.png">
+          <img class="qrcode-icon" src="../assets/images/index_qrcode.png">
         </div>
       </div>
       <div class="heart-wrap">
-        <img src="../../assets/images/index_bg_heart.png">
+        <img src="../assets/images/index_bg_heart.png">
       </div>
       <div class="map-wrap">
         <UMap :styleObj="{width: '1200px',margin: '0 auto',padding:'20px',backgroundColor:'#fff'}"></UMap>
@@ -39,10 +39,10 @@
   </div>
 </template>
 <script>
-import UContainer from '../../components/UContainer'
-import UCarousel from '../../components/UCarousel'
-import UMap from '../../components/UMap'
-import bannerMixin from '../../mixins/bannerMixin'
+import UContainer from '@/components/UContainer'
+import UCarousel from '@/components/UCarousel'
+import UMap from '@/components/UMap'
+import bannerMixin from '@/mixins/bannerMixin'
 export default {
   name: 'Index',
   components: {
@@ -66,7 +66,7 @@ export default {
 }
 </script>
 <style lang="less">
-@import "../../styles/common.less";
+@import "../styles/common.less";
 .special-wrap{
   background-color: #f9f2f2;
   padding: 20px 0;

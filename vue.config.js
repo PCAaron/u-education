@@ -19,42 +19,14 @@
  */
 
 const path = require('path')
-const glob = require('glob')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
-// 配置pages多页面获取当前文件夹下的html和js
-function getEntry(globPath) {
-  const entries = {}
-  let basename; let tmp; let pathname
-
-  glob.sync(globPath).forEach(function(entry) {
-    basename = path.basename(entry, path.extname(entry))
-    // console.log(entry)
-    tmp = entry.split('/').splice(-3)
-    pathname = basename // 正确输出js和html的路径
-
-    // console.log(pathname)
-    entries[pathname] = {
-      entry: 'src/' + tmp[0] + '/' + tmp[1] + '/main.js',
-      template: 'src/' + tmp[0] + '/' + tmp[1] + '/' + tmp[2],
-      title: tmp[2],
-      filename: tmp[2],
-      chunks: ['chunk-vendors', 'chunk-common', pathname]
-    }
-  })
-  return entries
-}
-
-
-const pages = getEntry('./src/pages/**?/*.html')
 // 配置end
 module.exports = {
   publicPath: process.env.NODE_ENV && process.env.NODE_ENV.includes('production') ? './' : '/',
   lintOnSave: true,
   productionSourceMap: false,
-  pages,
   devServer: {
-    index: 'index.html', // 默认启动serve 打开index页面
     open: process.platform === 'darwin',
     host: '',
     port: 8081,
@@ -91,9 +63,6 @@ module.exports = {
         options.limit = 100
         return options
       })
-    Object.keys(pages).forEach(entryName => {
-      config.plugins.delete(`prefetch-${entryName}`)
-    })
     if (process.env.NODE_ENV && process.env.NODE_ENV.includes('production')) {
       config.plugin('extract-css').tap(() => [{
         path: path.join(__dirname, './dist'),
@@ -109,13 +78,21 @@ module.exports = {
             staticDir: path.join(__dirname, 'dist'),
 
             // 对应自己的路由文件，比如a有参数，就需要写成 /a/param1。
-            routes: ['/', '/class', '/guide', '/teacher', '/information', '/about'],
+            routes: ['/', '/class/math', '/class/english', '/class/chinese', '/guide', '/teacher', '/information', '/about'],
+
+            // To minify the resulting HTML.
+            minify: {
+              collapseBooleanAttributes: true,
+              collapseWhitespace: true,
+              decodeEntities: true,
+              keepClosingSlash: true,
+              sortAttributes: true
+            },
 
             // 这个很重要，如果没有配置这段，也不会进行预编译
             renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
-              inject: {
-                foo: 'bar'
-              },
+              // 配置inject可通过window.injectProperty获取参数
+              inject: { },
               headless: false,
               // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
               renderAfterDocumentEvent: 'render-event'

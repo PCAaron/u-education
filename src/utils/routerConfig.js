@@ -1,11 +1,11 @@
 // 配置页面菜单
 const routeMap = {
-  index: 'index.html', // 首页
-  class: 'class.html', // 班课培优
-  guide: 'guide.html', // 晚间辅导
-  teacher: 'teacher.html', // 名师介绍
-  information: 'information.html', // 资讯中心
-  about: 'about.html' // 关于我们
+  index: '/', // 首页
+  class: 'class', // 班课培优
+  guide: 'guide', // 晚间辅导
+  teacher: 'teacher', // 名师介绍
+  information: 'information', // 资讯中心
+  about: 'about' // 关于我们
 }
 
 // 接受route：路径，params：参数，参数以对象形式,open:默认当前页面打开

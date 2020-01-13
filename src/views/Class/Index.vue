@@ -91,17 +91,18 @@
   </div>
 </template>
 <script>
-  import UContainer from '../../components/UContainer'
-  import UCarousel from '../../components/UCarousel'
-  import UMap from '../../components/UMap'
-  import USwiper from '../../components/USwiper'
+  import UContainer from '@/components/UContainer'
+  import UCarousel from '@/components/UCarousel'
+  import UMap from '@/components/UMap'
+  import USwiper from '@/components/USwiper'
   import UMath from './components/UMath'
   import UEnglish from './components/UEnglish'
   import UChinese from './components/UChinese'
-  import bannerMixin from '../../mixins/bannerMixin'
+  import bannerMixin from '@/mixins/bannerMixin'
   import { queryString } from '../../utils'
 
   export default {
+    props: ['type'],
     name: 'Math',
     data() {
       return {
@@ -153,6 +154,7 @@
 
     },
     mounted() {
+      console.log(this.$route.params)
       this.lesson = queryString('type')
     },
     methods: {

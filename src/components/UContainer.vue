@@ -180,10 +180,17 @@
     },
     methods: {
       toPage(page) {
-        windowOpenUrl(page)
+        this.$router.push({
+          path: page
+        })
       },
       handleCommand(command) {
-        windowOpenUrl(routeMap.class, { type: command })
+        this.$router.push({
+          name: routeMap.class,
+          params: {
+            type: command
+          }
+        })
         this.$emit('changeType', command)
       },
       onSubmit() {

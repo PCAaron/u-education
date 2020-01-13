@@ -12,9 +12,9 @@
   </div>
 </template>
 <script>
-import UContainer from '../../components/UContainer'
-import UCarousel from '../../components/UCarousel'
-import bannerMixin from '../../mixins/bannerMixin'
+import UContainer from '@/components/UContainer'
+import UCarousel from '@/components/UCarousel'
+import bannerMixin from '@/mixins/bannerMixin'
 
 export default {
   name: 'Teacher',
@@ -36,7 +36,7 @@ export default {
 }
 </script>
 <style lang="less">
-@import "../../styles/common.less";
+@import "../styles/common.less";
 .commonMix(@bg:#f9f2f2){
   background-color: @bg;
   padding: 20px 0;
